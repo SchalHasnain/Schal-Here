@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    double a,b;
+    int sign;
+    printf("\t\t\tCalculator\n");
+    printf("_______________________________________________________\n");   // Taking User's Operator
+    printf("\nChoose Your Operator \n");
+    printf("1 For Sum                    2 For Subtraction\n");
+    printf("3 For Product                4 For Division\n");
+    printf("5 For Power                  6 For Square Root\n\n");
+    printf("Enter Your Operator:");
+    fflush(stdin);
+    scanf("%d",&sign);
+    printf("\n");
+    switch (sign) // Calculating with Switch statement
+    {
+        case 1:
+        Add(a,b);
+        break;
+
+        case 2:
+        Sub(a,b);
+        break;
+
+        case 3:
+        Pro(a,b);
+        break;
+
+        case 4:
+        Div(a,b);
+        break;
+
+        case 5:
+        PWR(a,b);
+        break;
+
+        case 6:
+        SQRT(a,b);
+        break;
+
+        default:
+        printf("Invalid Operator\n\n");
+}
+      printf("_______________________________________________________\n");
+
+
+
+}
+void Add(double a,double b) // add function
+{
+    double sum;
+    printf("Enter Number 1:");
+    scanf("%lf",&a);
+    printf("Enter Number 2:");
+    scanf("%lf",&b);
+    sum = a + b;
+    printf("\nSum of Two Numbers= %.1lf\n\n",sum);
+}
+void Sub(double a,double b) // subtraction function
+{
+    double sub;
+    printf("Enter Number 1:");
+    scanf("%lf",&a);
+    printf("Enter Number 2:");
+    scanf("%lf",&b);
+    sub = a - b;
+    printf("\nSubtraction of Two Numbers = %.1lf\n\n",sub);
+}
+void Pro(double a,double b) // product function
+{
+    double pro;
+    printf("Enter Number 1:");
+    scanf("%lf",&a);
+    printf("Enter Number 2:");
+    scanf("%lf",&b);
+    pro = a * b;
+    printf("\nProduct of Two Numbers = %.1lf\n\n",pro);
+}
+void Div(double a,double b) // division function
+{
+    double div;
+    printf("Enter Number 1:");
+    scanf("%lf",&a);
+    printf("Enter Number 2:");
+    scanf("%lf",&b);
+    div = a / b;
+    printf("\nDivision of Two Numbers = %.1lf\n\n",div);
+}
+void PWR(double a,double b) // power function
+{
+    printf("Enter Number:");
+    scanf("%lf",&a);
+    printf("Enter Number of Power:");
+    scanf("%lf",&b);
+    printf("\n%.1lf Power of %.1lf = %.1lf\n\n",b,a,pow(a,b));
+}
+void SQRT(double a) // Square root function
+{
+    printf("Enter Number:");
+    scanf("%lf",&a);
+    printf("\nSquare root of %.1lf = %.1lf\n\n",a,sqrt(a));
+}
+
